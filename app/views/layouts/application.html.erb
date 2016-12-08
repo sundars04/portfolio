@@ -16,11 +16,20 @@
     <%= link_to "Blog Portfolio", root_path, class:"name" %>
     <nav>
       <%= link_to "Articles", posts_path %>
-      <%= link_to "Projects", "#" %>
+      <%= link_to "Projects", projects_path %>
       <%= link_to "Contact", "#" %>
       
     </nav>
   </header>
+    <% if alert %>
+      <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% elsif notice %>
+      <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end -%>
 
     <%= yield %>
     <footer id="main_footer">
@@ -31,5 +40,15 @@
         <a href="http://github.com/sundars04" target="_blank"><i class="fa fa-github"></i></a>
       </nav>
     </footer>
+
+    <script>
+      $(document).ready(function(){
+        setTimeout(function() {
+          $('#notice_wrapper').fadeOut("slow", function() {
+            $this.remove();
+          });
+        }, 4500 );
+      });      
+    </script>
   </body>
 </html>
