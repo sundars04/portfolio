@@ -1,8 +1,24 @@
-<h1><%= @post.title %></h1>
-<p><%= simple_format(@post.content)%></p>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%= @post.created_at.to_time.strftime('%d %B %Y at %I:%M %P %Z')%></p>
+    <h1><%= @post.title %></h1>    
+    <hr>
+  </header>
 
-<br>
-<br>
+  <div id="content">
+    <%= simple_format(@post.content)%> 
+  </div>
+
+  <hr>
+
+  <div id="share_box">
+    <p>Share the <%= @post.title%></p>    
+    <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @post.title %> by @swaroopsundar - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+     <a onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+     <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+  </div>
+  <hr>
+</div>
 
 <%= link_to "Back", posts_path %>
 |
