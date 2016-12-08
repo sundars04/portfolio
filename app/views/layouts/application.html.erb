@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Blog / Portfolio</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
     <%= csrf_meta_tags %>
 
@@ -10,17 +12,19 @@
   </head>
 
   <body>
-    <header id="main_navigation" class="clearfix">      
-      <%= link_to "Blog Portfolio", root_path, class:"name" %>
-      <nav>        
-        <%= link_to "Articles", posts_path%>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+    <header id="main_navigation" class="clearfix">
+    <%= link_to "Blog Portfolio", root_path, class:"name" %>
+    <nav>
+      <%= link_to "Articles", posts_path %>
+      <%= link_to "Projects", "#" %>
+      <%= link_to "Contact", "#" %>
+      
+    </nav>
+  </header>
+
     <%= yield %>
     <footer id="main_footer">
-      <p class="copyright">&copy;2015 Mackenzie Child</p>
+      <p class="copyright">&copy;2016 My Portfolio</p>
       <nav>
         <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
         <a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
