@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem "font-awesome-rails"
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
