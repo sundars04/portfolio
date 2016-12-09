@@ -64,11 +64,11 @@ body {
   display: none;
 }
 
-.notice, .alert {
+/*.notice, .alert {
   text-align: center;
   padding: 1em 0;
   border-bottom: 1px solid #E9E9E9;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $dark;
@@ -214,14 +214,14 @@ input[type="submit"], .button {
 
 #notice_wrapper {
   width: 100%;
-  position:absolute;
-  background: rgba(208,103,82, 0.85);
+  position:inherit;
+  background: rgb(166, 166, 166);
   z-index: 999;
   p {
     color: white;
     text-align: center;
     font-weight: 700;
     font-size: 1.25rem;
-    padding: 1.5rem 0;
+    padding: 1.0rem 0;
   }
 }
