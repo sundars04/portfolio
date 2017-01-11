@@ -117,8 +117,8 @@ hr {
 }
 
 #main_navigation {
-  margin-top: -20px;
-  padding: 2.5em 5px;
+  margin-top: -30px;
+  padding: 1.0em 5px;
   border-bottom: 1px solid $border;
   .name {
     font-weight: 700;
@@ -133,7 +133,7 @@ hr {
   }
   nav {
     float: right;
-    padding-top: 1.0rem;
+    padding-top: 0.7rem;
     a {
       color: $dark;
       text-decoration: none;
