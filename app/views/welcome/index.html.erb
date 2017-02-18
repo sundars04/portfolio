@@ -20,7 +20,6 @@
     <% @projects.each do |project| %>
       <h3><a href="#"><%= link_to project.title, project %></a></h3>
       <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
-    <% end %>
-    
+    <% end %>    
   </div>
 </div>
